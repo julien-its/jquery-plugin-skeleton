@@ -33,6 +33,7 @@ const jqueryPluginSkeleton = (($) => {
 
         loadItems(){
             console.log('Load at:' + $(this._element).data('url'));
+            // ...
         }
 
         // Static
@@ -49,10 +50,6 @@ const jqueryPluginSkeleton = (($) => {
                 if (!data) {
                     data = new badgeFilters(this, params);
                     $element.data(DATA_KEY, data);
-                }
-
-                if (config === 'click') {
-                    data[config]()
                 }
             })
         }
